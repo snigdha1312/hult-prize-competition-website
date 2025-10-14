@@ -1,0 +1,247 @@
+.competitions-page {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    padding: 16px;
+  }
+  
+  /* Hero */
+  .hero-header {
+    text-align: center;
+    background-color: #292563;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-header p {
+    color: #ccc;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #292563;
+  }
+  
+  /* Journey Section */
+  .journey-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+  }
+  
+  .stage-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stage-card {
+    background-color: white;
+    border-top: 4px solid #EC2088;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 calc(50% - 20px);
+  }
+  
+  .stage-date {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Tracks Section */
+  .tracks-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .track-card {
+    background-color: white;
+    border-bottom: 4px solid #EC2088;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1 1 calc(33% - 20px);
+  }
+  
+  .track-icon {
+    color: #EC2088;
+    margin-bottom: 10px;
+  }
+  
+  .track-prize {
+    font-weight: bold;
+    color: #EC2088;
+  }
+  
+  /* Timeline */
+  .timeline-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .timeline-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+  }
+  
+  .timeline-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    margin-bottom: 4px;
+  }
+  
+  .timeline-icon.completed {
+    background-color: #EC2088;
+    color: white;
+  }
+  
+  .timeline-icon.ongoing {
+    background-color: #292563;
+    color: white;
+  }
+  
+  .timeline-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: #EC2088;
+    opacity: 0.3;
+  }
+  
+  .timeline-content {
+    background-color: white;
+    padding: 12px 16px;
+    border-left: 4px solid #292563;
+    border-radius: 8px;
+    flex: 1;
+  }
+  
+  .timeline-content.ongoing {
+    border-left-color: #EC2088;
+  }
+  
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    color: #EC2088;
+    font-size: 0.875rem;
+  }
+  
+  .timeline-status.completed {
+    background-color: #292563;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+  
+  .timeline-status.ongoing {
+    background-color: #EC2088;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+  }
+  
+  .timeline-title {
+    font-weight: 600;
+    color: #292563;
+  }
+  
+  /* Eligibility Section */
+  .eligibility-grid {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .eligibility-column h3 {
+    border-bottom: 2px solid #292563;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    color: #EC2088;
+  }
+  
+  .eligibility-column ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .eligibility-column li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .eligibility-column li svg {
+    margin-right: 8px;
+    color: #EC2088;
+  }
+  
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 40px 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .cta-section button {
+    background-color: #EC2088;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-section button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  

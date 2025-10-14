@@ -1,0 +1,140 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f7f7;
+  }
+  
+  .hult-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .form-box {
+    background: white;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .form-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #8A2890;
+  }
+  .form-header .heritage {
+    color: #EC2088;
+  }
+  .form-header p {
+    color: #555;
+  }
+  
+  .progress {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .progress-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ccc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+  .progress-dot.active {
+    background: #EC2088;
+  }
+  
+  .member-form h2 {
+    color: #8A2890;
+  }
+  .member-form input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .sdg-step h2 {
+    color: #8A2890;
+    margin-bottom: 10px;
+  }
+  .sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  .sdg-card {
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .sdg-card.selected {
+    background: #EC2088;
+    color: white;
+    border-color: #8A2890;
+  }
+  .sdg-num {
+    font-weight: 900;
+    font-size: 1.5rem;
+    display: block;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .nav-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #8A2890, #EC2088);
+    color: white;
+  }
+  .nav-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+  }
+  .modal-content h3 {
+    color: #8A2890;
+    margin-bottom: 10px;
+  }
+  .modal-content button {
+    margin-top: 15px;
+    background: #EC2088;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  

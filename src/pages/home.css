@@ -1,0 +1,331 @@
+/* HultPrizeStyle.css - Simple CSS only */
+
+/* --- Brand Colors & Typography --- */
+:root {
+    /* Official Hult Prize Colors */
+    --color-heritage: #EC2088; /* Primary Accent */
+    --color-purple: #8A2890;   /* Secondary Accent */
+    --color-midnight: #292563; /* Primary Dark/Background */
+    --color-sky: #12B1E7;      /* Secondary Accent */
+    --color-sun: #FDD40E;      /* Highlight Color */
+    --color-black: #191919;
+    --color-gallery: #FFFFFF;
+    
+    /* Typography: Figtree family (Black, Bold, Regular, Light) */
+    --font-family-primary: 'Figtree', sans-serif;
+  }
+  
+  /* --- Base Styles --- */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-gallery);
+  }
+  
+  h1, h2, h3 {
+    font-weight: 700; /* Figtree Bold/Black */
+    line-height: 1.2;
+  }
+  
+  section {
+    padding: 60px 5% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* --- Header & Footer --- */
+  .header {
+    background-color: var(--color-midnight);
+    color: var(--color-gallery);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo-text {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: var(--color-gallery);
+  }
+  
+  .footer {
+    background-color: var(--color-black);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 5%;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .footer a {
+    color: var(--color-sky);
+    text-decoration: none;
+  }
+  
+  /* --- Call to Action Button --- */
+  .cta-button {
+    background-color: var(--color-heritage);
+    color: var(--color-gallery);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--color-purple);
+  }
+  
+  /* --- Hero Section (Image Fading) --- */
+  .hero {
+    height: 80vh; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-bg-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Using a gradient of key colors for a vibrant overlay */
+    background: linear-gradient(135deg, var(--color-midnight) 0%, var(--color-heritage) 100%);
+    opacity: 0.9;
+    z-index: 1;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Starts hidden, controlled by JSX/state */
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+    /* Placeholder for actual image content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gallery);
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    color: var(--color-gallery);
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5em; 
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: var(--color-sun); /* Highlight main text */
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    font-weight: 300; /* Figtree Light */
+    max-width: 700px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+  }
+  
+  /* --- IIT Bombay Nationals Section --- */
+  .iit-bombay-nationals h2 {
+    color: var(--color-midnight);
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  
+  .iit-bombay-nationals .date {
+    color: var(--color-heritage);
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: block;
+    font-size: 1.1em;
+  }
+  
+  .nationals-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  
+  .main-article {
+    flex: 3;
+  }
+  
+  .article-image {
+    max-width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #eee; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-black);
+    font-weight: 500;
+    border: 1px dashed var(--color-sky);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  
+  .article-text p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .judges-panel {
+    flex: 2;
+    background-color: #f7f7f7;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-sky);
+  }
+  
+  .judges-panel h3 {
+    color: var(--color-midnight);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--color-sky);
+    padding-bottom: 5px;
+  }
+  
+  .judges-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .judges-panel li {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .judges-panel li strong {
+    color: var(--color-purple);
+    font-weight: 700;
+  }
+  
+  /* --- Competition Journey Section --- */
+  .competition-journey {
+    background-color: var(--color-midnight);
+    color: var(--color-gallery);
+    padding: 80px 5%;
+  }
+  
+  .journey-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--color-sun);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .stat-item {
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 5px solid var(--color-heritage);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat-number {
+    font-size: 3em;
+    font-weight: 900; 
+    color: var(--color-sky);
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  
+  /* --- Social Enterprise Mission Section (The Winners/Finalists Placeholder) --- */
+  .mission-section {
+    padding: 80px 5%;
+    background-color: #FDD40E10; /* Light Sun background */
+  }
+  
+  .mission-text h2 {
+    color: var(--color-heritage);
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  
+  /* --- Responsive Design --- */
+  @media (max-width: 900px) {
+    .nationals-content {
+      flex-direction: column;
+    }
+    .judges-panel {
+      order: -1; 
+      margin-bottom: 30px;
+    }
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    .header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero h1 {
+      font-size: 2.2em;
+    }
+    .hero p {
+      font-size: 1.1em;
+    }
+  }
